@@ -1,5 +1,3 @@
-console.clear();
-
 document.querySelector('.calculate_button').addEventListener('click', () => {
   let values = {
     proceeds: Number(document.getElementById('proceeds').value) || 0,
