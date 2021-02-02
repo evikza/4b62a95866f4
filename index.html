@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.xz.style" />
+    <link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Калькуляриус</h1>
+      <p>Расчитаем доходы, прибыль и рентабельность.</p>
+    </header>
+    <section>
+      <div class="proceeds__container">
+        <label for="proceeds" class="proceeds__placeholder"
+          >Cумма денег, полученная в результате реализации товаров или
+          услуг</label
+        >
+        <input
+          type="text"
+          id="proceeds"
+          autofocus=""
+          class="proceeds__input proceeds__input_not-empty"
+          value="0"
+          pattern="\d*"
+        />
+      </div>
+      <div class="costPrice__container">
+        <label for="costPrice" class="costPrice__placeholder"
+          >Cумма всех трат, которые появляются при продаже продукции</label
+        >
+        <input
+          type="text"
+          id="costPrice"
+          class="costPrice__input costPrice__input_not-empty"
+          value="0"
+          pattern="\d*"
+        />
+        +
+        <input
+          type="text"
+          id="operatingExpenses"
+          class="operatingExpenses__input operatingExpenses__input_not-empty"
+          placeholder="Операционные траты"
+          pattern="\d*"
+        />
+      </div>
+      <div class="calculate_values__button">
+        <button class="calculate_button">Расчитать</button>
+      </div>
+      <div class="table__container">
+        <table>
+          <tr>
+            <td title="Валовая прибыль">Прибыль от продаж</td>
+            <td class="payment_element">
+              <span id="revenueSales">0</span>
+              <span class="attribute_after_element">₽</span>
+            </td>
+          </tr>
+          <tr>
+            <td title="Валовая рентабельность">Рентабельность</td>
+            <td class="payment_element">
+              <span id="profitability">0</span>
+              <span class="attribute_after_element">%</span>
+            </td>
+          </tr>
+          <tr>
+            <td title="Торговая наценка">Торговая наценка (ед.)</td>
+            <td class="payment_element">
+              <span id="tradeMargin">0</span>
+              <span class="attribute_after_element">%</span>
+            </td>
+          </tr>
+          <tr style="opacity: 0.7">
+            <td title="Чистая прибыль">
+              Убыток от продаж
+              <span class="information_issue"></span>
+            </td>
+            <td class="payment_element">
+              <span id="lossSales">0</span>
+              <span class="attribute_after_element">₽</span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <script src="bundler.js"></script>
+  </body>
+</html>

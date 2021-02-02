@@ -1,0 +1,38 @@
+label {
+  display: block;
+  margin-bottom: 6px;
+}
+
+section > div {
+  margin-bottom: 12px;
+}
+
+table {
+  margin-top: 18px;
+}
+
+td,
+th {
+  border: none;
+  border-top: 1px solid var(--nc-bg-3);
+  border-bottom: 1px solid var(--nc-bg-3);
+  text-align: left;
+  padding: 0.5rem;
+}
+
+tr:nth-child(even) {
+  background: transparent;
+}
+
+.payment_element {
+  text-align: right;
+}
+
+.attribute_after_element {
+  /* margin-left: 6px; */
+  opacity: 0.6;
+}
+
+.information_issue {
+  display: none;
+}
